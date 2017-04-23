@@ -7,6 +7,7 @@ OpenEVA will be a resource management business sim in which you play as a blue c
 
  I want the incredible complexity of futuristic space ships and robots reflected in the game; Each piece of Equipment will be constructed of a detailed array of Parts and Materials which will need to be maintained and replaced as they become worn or damaged. The player will use their Equipment in order to Contracts, which will be the player's main income and driver of gameplay. Players will need to manage money, power, fuel, food and many other Resources as they operate and grow their modest business. Purchasing, building, upgrading, or otherwise acquiring Equipment and Components will serve the core source of game progress. I also have plans for a licensing and permit system which will provide additional progression and difficulty. Finally the player will be occasionally presented with Events which will add complexity and flavor to gameplay.
 
+The main gameplay loop an OpenEVA will start with the player looking over a list of available Contracts and selecting one they wish to undertake. They will then assign Equipment required for the Contract
 
 ##### Resources
 
@@ -46,4 +47,8 @@ Contact jobs will exist as a series of flavor text and player choices. At each s
 
 I feel that this system will provide a good enough compulsion loop to serve as one of our main gameplay drivers. They will also serve as a major delivery method for the game's story, theme and flavor. This will all be defined through simple JSON so it will be easy to add new Contracts to the pool.
 
-##### Events 
+##### Events
+
+Events will be a crucial part of OpenEVA gameplay and narrative. The player will occasionally receive Events at random or at specific points in the game. Events will be one of the main delivery methods for narrative, flavor and decision making, while adding an element of difficulty and unpredictability to gameplay.
+
+ Events will be presented to the player as a series of text based cards and player choices. At each stage in an Event the player will be presented with a text description of the situation, and one or more options on how to proceed. Once an option has been selected the Event will move to the next stage. Once complete the player will be given a description of the outcome, and a summary of any rewards or penalties resulting from the Event. Event outcomes may be based on probability or player choice.
