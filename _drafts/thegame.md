@@ -1,6 +1,7 @@
 ---
 format: post
 title: "The Game"
+catagories: OpenEVA
 ---
 OpenEVA will be a resource management business sim in which you play as a blue collar ExtraVehicular Activity contractor working on humanity's frontier in the year 2120. The main mechanic will center around building and maintaining your spaceship, EVA suits, robots, computers and other equipment required to fulfill various contracts in hazardous alien environments throughout the star system. The final goal is to save money for retirement, with an array of possible outcomes based on the player's performance. The gameplay will not be super exiting, all gameplay systems will be something which can be implemented in a spreadsheet, but that can be something extremely useful when designing a complex, data-driven game like this. I intend for the game to be highly modular and extendable. All game Resources, Parts, Equipment, Contracts, Events and more will be simple JSON definitions which will allow users to create their own content. 
 
