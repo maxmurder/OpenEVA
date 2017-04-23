@@ -1,2 +1,4 @@
 /docs/_site
 /docs/.jekyll-metadata
+
+*.lock
