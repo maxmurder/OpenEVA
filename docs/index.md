@@ -1,4 +1,13 @@
 # OpenEVA
-### Space Maintnace Sim
+### An Extravehicular Maintenance Sim
 
 Please Stand By...
+
+<ul>
+ {% for post in site.posts %}
+  <li>
+   <a href="{{ post.url }}">{{ post.title }}</a>
+   {{ post.excerpt }}
+  </li>
+ {% endfor %}
+</ul>
