@@ -1,8 +1,6 @@
 # OpenEVA
 ### An Extravehicular Maintenance Sim
 
-Please Stand By...
-
 <ul>
  {% for post in site.posts %}
   <li>
