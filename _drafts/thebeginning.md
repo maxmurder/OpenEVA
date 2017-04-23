@@ -1,7 +1,6 @@
 ---
 format: post
 title: "The Beginning"
-categories: OpenEVA
 ---
 The repo is set up, the blog is online and I can officially begin work on OpenEVA. This is a project that I have been milling in my mind for some time so I am quite exited to begin. For this project I really want to get the full open gamedev experience, complete with devblog. I am a huge proponent of free software and open source collaboration, which is why I have chosen GPL v3.0 for the OpenEVA licence. I want this to be an open experience with every opportunity for others to share and learn along with me. I will try to keep a very regular devblog of my progress as well as provide reference and knowledge of the technology and art I will use.
 
