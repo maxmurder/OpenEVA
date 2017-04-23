@@ -2,3 +2,5 @@
 /docs/.jekyll-metadata
 
 *.lock
+*.swp
+*.fuse*
