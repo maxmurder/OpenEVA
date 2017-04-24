@@ -29,7 +29,8 @@ Each piece of Equipment will consist of a collection of Components which each ha
 
 Examples of Equipment include the player's spaceship, EVA suits, robots, surface vehicles, excavators and construction machinery, specialized tools, laptop computers and pretty much any tool or item that has some function in the game.
 
-Equipment will be a container for Components which will have their own capabilities, functions and requirements. A Component is a functional item that makes up a piece of Equipment. A piece of computer Equipment might consist of a power supply Component, several circuit board Components, a processor Component, a GPU, RAM, hard drives, a cooling system, wiring, input and display Components, an operating system and specific software. These Components are each constructed out of their own Parts and materials.
+Equipment will be a container for Components which will have their own capabilities, functions and requirements. A Component is a functional item that makes up a piece of Equipment. A piece of computer Equipment might consist of a power supply Component, several circuit board Components, a processor Component, a GPU, RAM, hard drives, a cooling system, ATX case, wiring, input and display Components, an operating system and specific software. These Components are each constructed out of their own Parts and materials.
+
 
 Components may produce and consume Resources, or provide some other function or utility to the player. A reactor component might slowly use Uranium-235 as fuel and produce electricity and other elements and isotopes as byproducts.
 
