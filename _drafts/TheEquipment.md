@@ -10,7 +10,7 @@ The modular function, utility and physical structure of Equipment will be repres
 
 Components are constructed from collections of interchangeable Parts. Parts themselves are collections of Parts and the raw Resources they are comprised of. Parts have no functional utility on their own, however they still may gate and trigger Contracts, Events and other content and must be maintained, improved and customized. Parts are the elements of Equipment which become worn; Conditions of Equipment, Components and Parts are a product of the conditions of their constituent Parts. The game will simply track and change the conditions of the lowest level parts. Parts may become worn during Events, Contracts or through general use. Parts may be fabricated, repaired, purchased, sold, and replaced by the player individually or as part of a larger part structure.
 
-A simple keyboard switch Part may be comprised of a plastic case Part, plastic plunger and slider Parts, an aluminimum spring and copper, gold or steel electrical contact Parts. 
+A simple keyboard switch Part may be comprised of a plastic case Part, plastic plunger and slider Parts, an aluminium spring and copper, gold or steel electrical contact Parts. 
 
-Equipment and Components in the player's inventory enable them to fabricate virtually any Part,  
+Equipment and Components in the player's inventory enable them to fabricate customize and maintain virtually any Part, Component or Equipment.  
 
