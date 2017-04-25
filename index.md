@@ -7,6 +7,7 @@
    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
    <div>
     {{ post.content | strip_html | truncatewords: 100 }}
+    \n
    </div>
   </li>
  {% endfor %}
