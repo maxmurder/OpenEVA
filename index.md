@@ -5,9 +5,9 @@
  {% for post in site.posts %}
   <li>
    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-   <li>
+   <div>
     {{ post.content | strip_html | truncatewords: 100 }}
-   </li>
+   </div>
   </li>
  {% endfor %}
 </ul>
