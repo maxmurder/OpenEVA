@@ -1,6 +1,32 @@
 ---
 ---
 @import "{{site.theme}}";
-post_exerpt {
-    padding-bottom: 32px;
+
+exerpt {
+ border-top: 1px solid #bbb;
+ display: block;
+ margin-bottom: 16px;
+}
+
+postdiv {
+ color: #bbb;
+ padding: 0 16px;
+}
+
+#project_tagline {
+ font-size: 10pt;
+ margin: 0;
+}
+
+#project_title {
+ margin: 0;
+ padding: 0;
+}
+
+#header_links {
+ font-size: 10pt;
+}
+
+#header_wrap {
+ padding: 0;
 }
