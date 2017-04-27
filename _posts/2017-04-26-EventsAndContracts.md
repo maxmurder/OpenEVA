@@ -1,6 +1,6 @@
 ---
 format: post
-title: Events And Contracts
+title: Events and Contracts
 ---
 A key element of gameplay and delivery method for theme and narrative content in OpenEVA will be the Event and Contract system. The system will be very simple conceptually; The player is shown a sequence of text based descriptions, at each step in the sequence the player is given one or more choices on how to proceed, and the outcome of the event may affect the game's state. There are countless examples of games and interactive experiences which make use of this model, likely dating back to the development of language itself. Many of my all time favorite games are heavily event driven, and I have coded simple event systems for many projects and technologies. Personally, I appreciate the versatility of text and simple choices to convey any description, situation, dilemma, theme, humor or narrative elements the author can imagine. Likewise, I encourage players to use their imagination and enjoy the experience as they would a book or other literature. Simple text based events have great potential to drive narrative, theme and action, using simple systems and a clean interface in a way that is easy for authors and content creators to define.
 
