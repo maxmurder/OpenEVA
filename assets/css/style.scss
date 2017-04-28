@@ -12,9 +12,13 @@ postdiv {
  color: #bbb;
  padding: 0 16px;
 }
+postdate {
+ color: #666;
+}
 
 #project_tagline {
  font-size: 10pt;
+ letter-spacing: 0.1pt;
  margin: 0;
 }
 
@@ -29,4 +33,16 @@ postdiv {
 
 #header_wrap {
  padding: 0;
+}
+
+#header_wrap .inner {
+ padding: 32px 0 16px 0;
+}
+
+p.copyright {
+ font-size: 8pt;
+}
+
+li.exerpt {
+ list-style-type: none;
 }

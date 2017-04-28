@@ -1,9 +1,9 @@
 <ul>
  {% for post in site.posts %}
-  <li>
+  <li class="exerpt">
    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
    <postdiv>|</postdiv>
-   {{ post.date | date: '%Y - %m - %d' }}
+   <postdate>{{ post.date | date: '%Y - %m - %d' }}</postdate>
    <div>
    <exerpt>
       {{ post.content | strip_html | truncatewords: 100 }}
