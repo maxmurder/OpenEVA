@@ -32,7 +32,7 @@ postdate {
 }
 
 #header_wrap {
- padding: 0;
+ padding: 0 16px;
 }
 
 #header_wrap .inner {
@@ -45,4 +45,8 @@ p.copyright {
 
 li.exerpt {
  list-style-type: none;
+}
+
+a.header {
+ color: #AAA;
 }
