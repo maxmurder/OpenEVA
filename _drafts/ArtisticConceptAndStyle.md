@@ -16,7 +16,7 @@ Equipment will be assigned a set of simple sprites which will provide a visual r
 
 Event stages may be accompanied by a static image to provide immersion and visual impact. Event images should be high quality artwork conforming to the scenario's theme and artistic style. For the core OpenEVA game scenario these will likely take the form of hand-drawn digital paintings, high resolution <a href="https://github.com/jcjohnson/neural-style">artistic style transfer</a>, and other high quality artwork. Content designers will select Event artwork as part of the Event's JSON definition.
 
-Finally, in-game interfaces should be developed in a modular and customizable way; Designers should be free to define the look and feel of the user interface per their vision. The underlying system should be extensible, allowing for mods and customisation. The user interface will likely be the most complex, and high risk feature of OpenEVA. Clean, flexible and user friendly interface design will be absolutely essential to OpenEVA's success. I expect interface design and development to require a majority of OpenEVA's development schedule.
+Finally, in-game interfaces should be developed in a modular and customizable way; Designers should be free to define the look and feel of the user interface per their vision. The underlying system should be extensible, allowing for mods and customisation. The user interface will likely be the most complex and high risk feature of OpenEVA. Clean, flexible and user friendly interface design will be absolutely essential to OpenEVA's success. I expect interface design and development to require a majority of OpenEVA's development schedule.
 
 ##### Concept Design
 
