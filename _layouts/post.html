@@ -3,7 +3,11 @@ layout: default
 ---
 <div>
  <section id="post_content">
-  <h3> {{ page.title }} </h3>
+  <aheader>
+   <b>{{ page.title }}</b>
+   <postdiv>|</postdiv>
+   <postdate id="adate">{{ page.date | date:'%Y - %m - %d'}}</postdate>
+  </aheader>
    <article>{{ content }}</article>
  </section>
 </div>

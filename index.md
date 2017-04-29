@@ -1,4 +1,4 @@
-<ul>
+<ul id="blog">
  {% for post in site.posts %}
   <li class="exerpt">
    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

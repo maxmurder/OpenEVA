@@ -12,14 +12,29 @@ postdiv {
  color: #bbb;
  padding: 0 16px;
 }
+
 postdate {
  color: #666;
+ font-size: 10pt;
 }
+
+aheader {
+ font-size: 16pt;
+}
+
+#adate {
+ font-size: 12pt;
+}
+
+/*
+ overrides
+*/
 
 #project_tagline {
  font-size: 10pt;
  letter-spacing: 0.1pt;
  margin: 0;
+ padding: 0 0 8px 0;
 }
 
 #project_title {
@@ -32,11 +47,15 @@ postdate {
 }
 
 #header_wrap {
- padding: 0 16px;
+ padding: 0;
 }
 
 #header_wrap .inner {
- padding: 32px 0 16px 0;
+ padding: 32px 0 8px 0;
+}
+
+#main_content {
+ padding-top: 32px;
 }
 
 p.copyright {
@@ -53,4 +72,12 @@ a.header {
 
 i {
  font-style: italic;
+}
+
+b {
+ font-weight: bold;
+}
+
+ul {
+ padding: 0;
 }
