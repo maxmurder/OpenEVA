@@ -62,4 +62,4 @@ Once the game is complete the player will be shown a summary of their score and 
 
 ##### End User Documentation and Support
 
-Users of OpenEVA will inevitibly run into 
+Users of OpenEVA will need to be educated on how to use and play the game. Inevetibly users wi[l run into bugs and issues which will require support. 
