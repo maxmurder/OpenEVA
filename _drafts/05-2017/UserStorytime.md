@@ -62,4 +62,12 @@ Once the game is complete the player will be shown a summary of their score and 
 
 ##### End User Documentation and Support
 
-Users of OpenEVA will need to be educated on how to use and play the game. Inevetibly users wi[l run into bugs and issues which will require support. 
+Users of OpenEVA will need to be educated on how to use and play the game. Inevetibly users will run into bugs and issues which will require support. The game should ship with a stort tutorial sconario which will introduce players to the various game interfaces and core mechanics. The game will also ship with plain text documentation outlining the licence, basic usage, source code compilation and how to contribute as well as provide links to the source, community, documentation and support sites. I intend to set up a public wiki for gameplay and development documentation. The forums and github issues should serve as our official support channels. Hopefully much of this will be aided by the OpenEVA player and contrubutor community.
+
+##### Community
+
+A vital component in a modern game experience is learning, sharing and collaborating with a commurity of other players. OpenEVA will be a game where the ability to share creative player ingenuity, emergant gameplay and narratives will be crucial to fun and replayability. An approachable community will be key to OpenEVA player exprience, documentation, code and content contributions and maintenance will rely on a strong community. I hope to foster a friendly, accessible player and contributor communtiy on the official forums, github and social media.
+
+#### Conclusion
+
+As a game the player's story will be OpenEVA's main focus. OpenEVA's entire development and much of the tecnological infrastructure will be geared towards developing and refining the player's experience in and around the game. There is already a collosal amount of work laid out here, and this user story is still stratospherically high-level. The player's story is actually a fairly straight forward one; We have yet to discuss core developers, code and content contrubutors, wiki maintainers, forum moderation, website admin and more. Fortunately, much of the infrastructure can be shared between these different users. We will be exploring these roles in the coming days as we continue analyzing OpenEVA's user stories. 
