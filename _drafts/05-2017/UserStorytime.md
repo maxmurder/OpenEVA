@@ -68,6 +68,6 @@ Users of OpenEVA will need to be educated on how to use and play the game. Inevi
 
 A vital component in a modern game experience is learning, sharing and collaborating with a community of other players. OpenEVA will be a game where the ability to share creative player ingenuity, emergent gameplay and narratives will be crucial to fun and replayability. An approachable community will be key to OpenEVA player experience, documentation, code and content contributions and maintenance will rely on a strong community. I hope to foster a friendly, accessible player and contributor community on the official forums, github and social media.
 
-#### Conclusion
+##### Conclusion
 
 As a game, the player's story will be OpenEVA's main focus. OpenEVA's entire development and much of the technological infrastructure will be geared towards developing and refining the player's experience in and around the game. There is already a colossal amount of work required to support the story and it is still stratospherically high-level. Whats more, the player's story is actually a fairly straight forward one; We have yet to discuss core developers, code and content contributors, wiki maintainers, forum moderation, website admin and more. Fortunately, much of the infrastructure can be shared between these different users. We will be exploring these roles in the coming days as we continue analyzing OpenEVA's user stories. 
