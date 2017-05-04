@@ -8,4 +8,8 @@ OpenEVA will have several sets of developers which will form a sort of venn diag
 
 ##### Core Developers
 
-OpenEVA's core development workfow will follow
+OpenEVA's core development will follow a typical git workflow. Contributers will keep thier own forked repositories, editing code on development branches. Code will be merged with the mainline via pull requests willmade to the master OpenEVA repo. Pull requests will be tested and examined by the core development team. All code contributions should fix or implement some existing issue in the project issue tracking database. Pull requests will require a reference to an existing project issue.
+
+All development work done on OpenEVA should tracked via issues in our tracking database. Code development, feature requests and bugs will be described as issues, which can then be implemented and fixed by developers. Issues should be concise descriptions of the bug or feature, following a well defined structure. The issue database will be public and users will be allowed to submit bug reports and feature requests. However issues will need approval by the core development team before being accepted into the project's body of work. 
+
+Issue tracking may happen in the default github project issues, which can serve most open source projects well. However, I would like to set up a <a href="https://www.redmine.org/">Redmine</a> as it is has a ton of great features and can support much of the  OpenEVA community, documentation and development infrastructure.
