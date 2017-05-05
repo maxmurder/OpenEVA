@@ -2,7 +2,7 @@
 format: post
 Title: Game State
 ---
-Now that we have a high level model of the game mechanics, we can start designing the underlying systems which will enable them. The core element of OpenEVA's functionality is the game state: All player Equipment, Resources and game progress will be stored as a simple database of flags and values; All Events and player interaction will involve modifying game state.in some way; And in-game interfaces will be reflections of the current state. Game progress, Contract and Event completion or availability, Event choice options, outcomes and more can be tracked by an array of simple flags. Resource pools can be stored as a series of key-value pairs. Player Equipment inventory may be some straight forward relational struture of part templates and transient values. This solution should give OpenEVA a flexible and optomisable foundation upon which our mechanics, interfaces and content can be built.
+Now that we have a high level model of the game mechanics, we can start designing the underlying systems which will enable them. The core element of OpenEVA's functionality is the game state: All player Equipment, Resources and game progress will be stored as a simple database of flags and values; All Events and player interaction will involve modifying game state in some way; And in-game interfaces will be reflections of the current state. Game progress, Contract and Event completion or availability, Event choice options, outcomes and more can be tracked by an array of simple flags. Resource pools can be stored as a series of key-value pairs. Player Equipment inventory may be some straight forward relational struture of part templates and transient values. This solution should give OpenEVA a flexible and optomisable foundation upon which our mechanics, interfaces and content can be built.
 
 ##### Database
 
@@ -12,19 +12,29 @@ We will need to develop a schema for OpenEVA's database structure. Due to our hi
 
 Research will also be required to choose the database technology which will host our model. I hope to use a free software database solution or library to help with this. There are many technologies available and there is no need to reinvent the wheel. I have experience with <a href="https://mariadb.org/">MariaDB</a> in my professional career, however a more lightweight solution may be preferred. Over the coming weeks I will be researching a database solution for OpenEVA.
 
+##### API
+
+We will also need a flexible API so game logic may itnterface with our database. Luckily we should be fine using whatever API the technology we select comes with, since we shouldn't  be doing anyting out of te ordinary. Godot will be used to develop our front end and interface systems, but I would like to implement OpenEVA's state database and gameplay logic in an independent way if possible.
+
 ##### State Flags
 
-I envision meta game state being tracked by arbitrary string based flags. There will be a global pool of flags that can read by the game logic to determine the state of the game and decide actions. Flags can be added or removed from the pool as necessary by various parts of the game. Flags will determine Event and Contract availability, narrative progress, Equipment capabilities and more. It should be these flags may be highly optimized on the back end to save on space and performance while using a simple reflection system to enable human-readable definitions and debugging.
+I envision meta game state being tracked by arbitrary string based flags. There will be a global pool of flags that can read by the game logic to determine the state of the game and decide actions. Flags can be added or removed from the pool as necessary by various parts of the game. Flags will determine Event and Contract availability, narrative progress, Equipment capabilities and more. It will be possible for flags be highly optimized on the back end to save on space and performance while using a simple reflection system to enable human-readable definitions and debugging.
 
 ##### Equipment 
 
-Content creators will define Equipment templates using simple JSON definitions. Creators will begin by developing Part definitions outlining the details and capabilities of the Parts that will make up the Equipment. Parts and Equipment be configured to add or remove flags from the game state pool based on their functionality or presence in the player's inventory. Together Part and Equipment definitions will form the template that the game code uses to manifest the Equipment in-game.
+Content creators will define Equipment templates using simple JSON definitions. Creators will begin by developing Part definitions outlining the details and capabilities of the Parts that will make up the Equipment, then defining the Equipment template itself.
+
+Parts and Equipment be configured to add or remove flags from the game state pool based on their functionality or presence in the player's inventory. Together Part and Equipment definitions will form the template that the game code uses to manifest the Equipment in-game.
 
 Once the player has acquired a piece of Equipment in game it will be instantiated from it's template into the game state database as a collection of Part attribute data and their relationships to the attached Equipment. This should be fairly easily serializable and even allow the player to construct Equipment in-game and export it as a JSON template to share with the community.
 
 ##### Resources & Everything Else
 
-Content creators will also define Resource templates as JSON definitions containing the Resource's specific metadata. Player Resource pools will be stored in the database as simple tuples of key values containing information on the quantity of the Resource and its parent template. Resource metadata should be concise as possible, simply detailing the human readable names, in-game units and display properties. Designers will give utility and function to Resources through their Equipment, Event and Contract definitions.
+Content creators will also define Resource templates as JSON definitions containing the Resource's specific metadata. Player Resource, in-game pools could be stored in the database as simple tuples of key values containing information on the quantity of the Resource and its parent template. Resource metadata should be concise as possible, simply detailing the human readable names, in-game units and display properties. Designers will give utility and function to Resources through their Equipment, Event and Contract definitions.
+
+##### Serialization
+
+Players will want some way to save their progress and to load privious games. Luckily since we have a compact data model for the game and will likely use mature database technology, serialization should be painless. I would like player saves to be serializable as JSON or some other human reabable format. As an open game there is no need to obfoscate our save data, users should have the freedom to edit or share their save games at will. Since we will be handling a relatively small amount of data I dont forsee running into storage contiraints or the need for heavy compression.
 
 ##### Conclusion
 
