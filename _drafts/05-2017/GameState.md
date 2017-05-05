@@ -10,7 +10,7 @@ OpenEVA will need some sort of infrastructure to support game state data managem
 
 We will need to develop a schema for OpenEVA's database structure. Due to our highly data and content driven goals, we will need a flexible and robust data model to support the game. This is an area which will need considerable research and development: I have a little experience working with <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model">Entity Attribute Value (EAV)</a> databases, which may suit OpenEVA's purposes. The EAV model, while potentially complex, is perfect for handling data that can be described as a set of entities or objects which have a arbitrary number of attributes or properties. However after research and experimentation we may find that a traditional relational model or some other data structure may be better suited to OpenEVA's needs. Proper research and schema implementation will be vital to OpenEVA's development.
 
-Research will also be required to choose the database technology which will host our model. I hope to use a free software database solution or library to help with this. There are many technologies available and there is no need to reinvent the wheel. I have experience with <a href="https://mariadb.org/">MariaDB</a> in my professional career, however a more lightweight solution may be preferred. Over the coming weeks I will be researching a database solution for OpenEVA.
+Research will also be required to choose the database technology which will host our model. I hope to use a free software database solution or library to help with this. There are many existing technologies available and there is no need to reinvent the wheel. I have experience with <a href="https://mariadb.org/">MariaDB</a> in my professional career, however a more lightweight solution may be preferred. Over the coming weeks I will be researching a database solution for OpenEVA.
 
 ##### API
 
@@ -28,7 +28,7 @@ Parts and Equipment be configured to add or remove flags from the game state poo
 
 Once the player has acquired a piece of Equipment in game it will be instantiated from it's template into the game state database as a collection of Part attribute data and their relationships to the attached Equipment. This should be fairly easily serializable and even allow the player to construct Equipment in-game and export it as a JSON template to share with the community.
 
-##### Resources & Everything Else
+##### Resources
 
 Content creators will also define Resource templates as JSON definitions containing the Resource's specific metadata. Player Resource, in-game pools could be stored in the database as simple tuples of key values containing information on the quantity of the Resource and its parent template. Resource metadata should be concise as possible, simply detailing the human readable names, in-game units and display properties. Designers will give utility and function to Resources through their Equipment, Event and Contract definitions.
 
