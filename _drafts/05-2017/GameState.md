@@ -14,11 +14,11 @@ Research will also be required to choose the database technology which will host
 
 ##### API
 
-We will also need a flexible API so game logic may itnterface with our database. Luckily we should be fine using whatever API the technology we select comes with, since we shouldn't  be doing anyting out of te ordinary. Godot will be used to develop our front end and interface systems, but I would like to implement OpenEVA's state database and gameplay logic in an independent way if possible.
+We will also need a flexible API so game logic may itnterface with our database. Luckily we should be fine using whatever API the technology we select comes with, since we shouldn't be doing anyting out of te ordinary. Godot will be used to develop our front end and interface systems, but I would like to implement OpenEVA's state database and gameplay logic in an independent way if possible.
 
 ##### State Flags
 
-I envision meta game state being tracked by arbitrary string based flags. There will be a global pool of flags that can read by the game logic to determine the state of the game and decide actions. Flags can be added or removed from the pool as necessary by various parts of the game. Flags will determine Event and Contract availability, narrative progress, Equipment capabilities and more. It will be possible for flags be highly optimized on the back end to save on space and performance while using a simple reflection system to enable human-readable definitions and debugging.
+I envision meta game state being tracked by arbitrary string based flags. There will be a global pool of flags that can read by the game logic to determine the state of the game and decide actions. Flags can be added or removed from the pool as necessary by various parts of the game. Flags will determine Event and Contract availability, narrative progress, Equipment capabilities and more. It will be possible for these flags be highly optimized on the back end to save on space and performance while using a simple reflection system to enable human-readable definitions and debugging.
 
 ##### Equipment 
 
@@ -34,7 +34,7 @@ Content creators will also define Resource templates as JSON definitions contain
 
 ##### Serialization
 
-Players will want some way to save their progress and to load privious games. Luckily since we have a compact data model for the game and will likely use mature database technology, serialization should be painless. I would like player saves to be serializable as JSON or some other human reabable format. As an open game there is no need to obfoscate our save data, users should have the freedom to edit or share their save games at will. Since we will be handling a relatively small amount of data I dont forsee running into storage contiraints or the need for heavy compression.
+Players will want some way to save their progress and to load privious games. Luckily since we have a compact data model for the game and will likely use mature database technology, serialization should be painless. I would like player saves to be serializable as JSON or some other human reabable format. As an open game there is no need to obfoscate our save data, users should have the freedom to edit or share their save games at will. Since we will be handling a relatively small amount of data I dont forsee running into too many storage contiraints or the need for heavy compression.
 
 ##### Conclusion
 
