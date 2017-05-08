@@ -32,6 +32,8 @@ For some time OpenEVA user generated content will be hosted on the official foru
 
 As free software, users will be free to modify and distribute OpenEVA source code under the terms of the GNU GPL. Furthermore, I hope to develop OpenEVA in a modular, extensible way. Godot GDNative libraries should give the flexibility for modders to create extension modules for the game using the technology of their choice. A lot of research and development will be required to accomplish this. GDNative is a new feature of Godot 3.0 which I have yet to fully explore. However, extensibility should be a major objective of OpenEVA development.
 
+I hope to have some form of extension module discovery and distribution on the official forums and social media pages. This is an aspect that will be left largely to the developers and community at large at least until a solid content distribution model is in place. I will however need to keep in mind that extension modules should be folded into the content distribution systems as I develop those features.
+
 ##### Conclusion
 
 Overall our developers will likely require a large share of OpenEVA online infrastructure and administration. It should however be possible to accommodate their needs using existing free technology and relatively cheap services. Developer pipelines will also require significant integration with the game itself. This will require careful design and integration but it will be possible thanks to exercises like this. OpenEVA should have an efficient and well supported developer story, which promotes community and collaboration.
