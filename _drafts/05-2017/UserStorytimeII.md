@@ -1,5 +1,5 @@
 ---
-format:post
+format: post
 title: User Storytime Part II
 ---
 As developers we are also users of our software or game, only with a vastly different story than an end user. It is important to consider the developer's story as they have needs which will require support by our product and organisation. We will need to integrate workflows into the software; Explore development environments and technology; Provision build, test and deployment automation; Provide documentation, issue tracking, support and more. An effective developer story is key to any game or software development.
