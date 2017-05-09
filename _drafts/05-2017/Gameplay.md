@@ -6,6 +6,14 @@ Now that we have some idea of how our game state will be structured, we can begi
 
 ##### Update
 
-I want to rapture a real-time feel to OpenEVA; I imagine most OpenEVA campaigns to follow some sort of Oregon Trail-esque journey or adventure where the plaer is draw inextricably towards some final goal. I do however want both players and designers to have some control over the passage of time. Players should be able to pause time to make decisions or take a brake, or speed time thier desired pace, a la most Paradox games. Designers should have tha ability to set game start/end dates (likely through Events) and configure how much time passes every "tick."
+I want to capture a real-time feel to OpenEVA; I imagine most OpenEVA campaigns to follow some sort of Oregon Trail-esque journey or adventure where the plaer is draw inextricably towards some final goal. I do however want both players and designers to have some control over the passage of time. Players should be able to pause time to make decisions or take a brake, or speed time thier desired pace, a la most Paradox games. Designers should have tha ability to set game start/end dates (likely through Events) and configure how much time passes every tick.
 
-At a configurable real-time duration game-time will step forward by a configurable amount triggering events and updating game state. In game time can be tracked by Unix timestamp, every tick a dration is added to the value. Designers will for example, in their scenario definition tell the game to increment time six hours every [
+Every tick, game-time will advance by some duration, during which simulation routines may be run, Events queued and game state updated. Ideally this will be decoupled from our main engine loop and the specifics of period or duration made configurable. Game time can be tracked by an intager timestamp, the epoch of which is determined by designers per scenario and is displayed to the player as a human readable date. This should allow considerable flexibility without being too difficult to implement in code.
+
+<code>
+def updateGameState(int tick)
+    updateGameState("
+    updateResources(tick)
+    queueEvents(scenario.events, game.ambEventPool)
+    ...
+
