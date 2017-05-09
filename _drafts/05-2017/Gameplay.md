@@ -11,9 +11,18 @@ I want to capture a real-time feel to OpenEVA; I imagine most OpenEVA campaigns 
 Every tick, game-time will advance by some duration, during which simulation routines may be run, Events queued and game state updated. Ideally this will be decoupled from our main engine loop and the specifics of period or duration made configurable. Game time can be tracked by an intager timestamp, the epoch of which is determined by designers per scenario and is displayed to the player as a human readable date. This should allow considerable flexibility without being too difficult to implement in code.
 
 <code>
-def updateGameState(int tick)
-    updateGameState("
-    updateResources(tick)
-    queueEvents(scenario.events, game.ambEventPool)
-    ...
+# psudocode
+float tickTimer
 
+updateGameState(int tick):
+    db.incrementGameTime(tick)
+    game.updateResources(tick)
+    game.queueEvents(scenario.events, game.ambEventPool)
+    ...
+    
+mainEngineUpdate(float deltaTime):
+    tickTimer += deltaTime
+    if ticktimer >= scenario.tickRate:
+        updateGameState(scenario.tickDuration)
+	tickTimer = 0.0f
+</code>
