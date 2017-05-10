@@ -8,21 +8,31 @@ Now that we have some idea of how our game state will be structured, we can begi
 
 I want to capture a real-time feel to OpenEVA; I imagine most OpenEVA campaigns to follow some sort of Oregon Trail-esque journey or adventure where the plaer is draw inextricably towards some final goal. I do however want both players and designers to have some control over the passage of time. Players should be able to pause time to make decisions or take a brake, or speed time thier desired pace, a la most Paradox games. Designers should have tha ability to set game start/end dates (likely through Events) and configure how much time passes every tick.
 
-Every tick, game-time will advance by some duration, during which simulation routines may be run, Events queued and game state updated. Ideally this will be decoupled from our main engine loop and the specifics of period or duration made configurable. Game time can be tracked by an intager timestamp, the epoch of which is determined by designers per scenario and is displayed to the player as a human readable date. This should allow considerable flexibility without being too difficult to implement in code.
+Every tick, game-time will advance by some duration, during which simulation routines may be run, Events queued and game state updated. Ideally this will be decoupled from our main engine loop and the specifics of period or duration made configurable. Game time can be tracked by an integer timestamp, the epoch of which is determined by designers per scenario and is displayed to the player as a human readable date. This should allow considerable flexibility without being too difficult to implement in code.
 
 <code>
 # psudocode
 float tickTimer
 
+# our game state update funtion kicks off our game logic at every step
+# tick is the duration of time which passes every step
 updateGameState(int tick):
     db.incrementGameTime(tick)
     game.updateResources(tick)
     game.queueEvents(scenario.events, game.ambEventPool)
     ...
-    
+
+# this function is called every frame by the engine
+# deltaTime is real-time in seconds that has passed between frames
 mainEngineUpdate(float deltaTime):
     tickTimer += deltaTime
     if ticktimer >= scenario.tickRate:
         updateGameState(scenario.tickDuration)
 	tickTimer = 0.0f
 </code>
+
+The psudocode above implements a simplified version of our update loop. The concept is extremely simple: Time passed accumulates until it reaches a configured value, which then fires our game state update funtion incrementing game time and running periodic routines. Ideally final implementation of our game state API class library will have several funcitons which will allow game state to be read and manipulated agnostic of our game or engine
+
+##### Interface
+
+Of course we will want a reactive user interface and gameplay; Waiting until the next game tick to update 
