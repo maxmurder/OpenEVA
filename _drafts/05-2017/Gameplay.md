@@ -33,6 +33,10 @@ mainEngineUpdate(float deltaTime):
 
 The psudocode above implements a simplified version of our update loop. The concept is extremely simple: Time passed accumulates until it reaches a configured value, which then fires our game state update funtion incrementing game time and running periodic routines. Ideally final implementation of our game state API class library will have several funcitons which will allow game state to be read and manipulated agnostic of our game or engine
 
-##### Interface
+##### Gameplay Modules
 
-Of course we will want a reactive user interface and gameplay; Waiting until the next game tick to update 
+I want to implement OpenEVA's gameplay and intrface systems in a modular, extensible way. I hope to allow additional UI menus and gameplay logic to be added to the game through the use of GDNative modules. Taking care to develop our code in an exensible way will enabel enable all manner of things from reworking of the UI to FTL-esque combat minigames to be developed and added to the game. Of course, we are a long way from developing specific minigames, however we need to keep the goal of modularity in mind as we design and implement our code.
+
+By leveraging GDNative we sh
+
+I imagine OpenEVAs library structure to include database and api libraries, as well as core gameplay modules and software infrastructure to integrate with Godot. As well there will be a directories containing core and user-generated content, additional gameplay modules, configuration and save data files.   
