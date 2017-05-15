@@ -18,8 +18,8 @@ float tickTimer
 # tick is the duration of time which passes every step
 updateGameState(int tick):
     db.incrementGameTime(tick)
-    game.updateResources(tick)
-    game.queueEvents(scenario.events, game.ambEventPool)
+    game.updateGameplayModules(tick)
+    game.queueEvents(game.eventPool)
     ...
 
 # this function is called every frame by the engine
@@ -31,12 +31,14 @@ mainEngineUpdate(float deltaTime):
 	tickTimer = 0.0f
 </code>
 
-The psudocode above implements a simplified version of our update loop. The concept is extremely simple: Time passed accumulates until it reaches a configured value, which then fires our game state update funtion incrementing game time and running periodic routines. Ideally final implementation of our game state API class library will have several funcitons which will allow game state to be read and manipulated agnostic of our game or engine
+The psudocode above implements a simplified version of our update loop. The concept is extremely simple: Time passed accumulates until it reaches a configured value, which then fires our game state update funtion incrementing game time and running periodic routines. Ideally final implementation of our game state API class library will have several funcitons which will allow game state to be read and manipulated agnostic of our game or engine.
+
+Our in-game tick will run independent of our interface and other gameplay. The player will have real-time feedback and affects on game state as well. 
 
 ##### Gameplay Modules
 
 I want to implement OpenEVA's gameplay and intrface systems in a modular, extensible way. I hope to allow additional UI menus and gameplay logic to be added to the game through the use of GDNative modules. Taking care to develop our code in an exensible way will enabel enable all manner of things from reworking of the UI to FTL-esque combat minigames to be developed and added to the game. Of course, we are a long way from developing specific minigames, however we need to keep the goal of modularity in mind as we design and implement our code.
 
-By leveraging GDNative we sh
+By leveraging GDNative librarios we should be able to allow gameplay and interface extension modules to be developed and added to the game without requiring recompilation. An easy to use API for gameplay modules will need to be developed to enable interaction with the rest of the game. Gameplay modules should be able to hook into the game's "real time" or "game time" update loops and interact with the game state database, as well as modifying or or implementing UI elements. GDNative is a brand new feature of Godot 3.0, so a fair amount of research and dvelopment will be nesaccary to produce this feature.
 
-I imagine OpenEVAs library structure to include database and api libraries, as well as core gameplay modules and software infrastructure to integrate with Godot. As well there will be a directories containing core and user-generated content, additional gameplay modules, configuration and save data files.   
+I imagine OpenEVAs library structure to include database and api libraries, as well as core gameplay modules and software infrastructure to integrate with Godot. Seperate from the source code will be a directory containing core and user-generated content, additional gameplay modules, configuration and save data files. This should allow for easy organisation and seperabtion of code from content.
