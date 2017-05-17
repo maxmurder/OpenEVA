@@ -8,6 +8,8 @@ Now that we have some idea of how our game state be structured, we can begin to 
 
 I am going to be using Godot 3.0 to develop OpenEVA's interface and gameplay systems. However I would like to implement these features in an extensible and modular way. We will need a way for the engine to interact with with the game state database as well as specalized gameplay logic modules.
 
+##### Updates
+
 I want to capture a real-time feel to OpenEVA; I imagine most OpenEVA campaigns to follow some sort of Oregon Trail-esque journey or adventure where the plaer is draw inextricably towards some final goal. I do however want both players and designers to have some control over the passage of time. Players should be able to pause time to make decisions or take a brake, or speed time thier desired pace, a la most Paradox games. Designers should have tha ability to set game start/end dates (likely through Events) and configure how much time passes every tick.
 
 Every tick, game-time will advance by some duration, during which simulation routines may be run, Events queued and game state updated. Ideally this will be decoupled from our main engine loop and the specifics of period or duration made configurable. Game time can be tracked by an integer timestamp, the epoch of which is determined by designers per scenario and is displayed to the player as a human readable date. This should allow considerable flexibility without being too difficult to implement in code.
@@ -33,9 +35,9 @@ mainEngineUpdate(float deltaTime):
 	tickTimer = 0.0f
 </code>
 
-The psudocode above implements a simplified version of our update loop. The concept is extremely simple: Time passed accumulates until it reaches a configured value, which then fires our game state update funtion incrementing game time and running periodic routines. Ideally final implementation of our game state API class library will have several funcitons which will allow game state to be read and manipulated agnostic of our game or engine.
+The psudocode above implements a simplified version of our update loop. The concept is extremely simple: Time passed accumulates until it reaches a threshold value, which then fires our game state update funtion incrementing game time and running periodic routines. Ideally final implementation of our game state API class library will have several funcitons which will allow game state to be read and manipulated agnostic of our game or engine.
 
-Our in-game tick will run independent of our interface and other gameplay. The player will get real-time feedback and affects on game state as well. 
+Our in-game tick will run independent of our interface and other gameplay. The player will get real-time feedback and affects on game state as well.
 
 ##### Gameplay Modules
 
