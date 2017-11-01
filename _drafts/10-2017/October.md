@@ -15,4 +15,4 @@ Another exciting development is Gobot adding support for the mono framework. Thi
 
 ##### Onward
 
-Hopefully I will get time in November to begin laying the groundwork for the game itself and make progress toward basic functionality. The next couple months should be (relativly) exdting. Stay tuned!
+Hopefully I will get time in November to begin laying the groundwork for the game itself and make progress toward basic functionality. The next couple months should be (relatively) exdting. Stay tuned!
