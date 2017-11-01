@@ -11,8 +11,8 @@ Now that we have our database solution mostly sorted we can start to think about
 
 ##### C# in Godot!
 
-Another exciting development is Gobot adding support for the mono framework. This means we can now use C# in our Godot game projects. I still haven't tried it out but I may implement some of ourgameplay classes is C# as it should provide a little verbosity over GDScript. However, most of the in-engine code will still likely be GDScript since it is better supported and a really nice scripting language for games.
+Another exciting development is Gobot adding support for the mono framework. This means we can now use C# in our Godot game projects. I still haven't tried it out but I may implement some gameplay classes in C# as it should provide a little verbosity over GDScript. However, most of the in-engine code will still likely be GDScript since it is better supported and a really nice scripting language for games.
 
 ##### Onward
 
-Hopefully I will get time in November to begin laying the groundwork for the game itself and make progress toward basic functionality. The next couple months should be (relatively) exdting. Stay tuned!
+Hopefully I will get time in November to begin laying the groundwork for the game itself and make progress toward basic functionality. The next couple months should be (relatively) exiting. Stay tuned!
