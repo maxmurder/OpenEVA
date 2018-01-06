@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="OpenEVAgame"
+config/name="OpenEVA"
 config/icon="res://icon.png"
 
 [gdnative]
