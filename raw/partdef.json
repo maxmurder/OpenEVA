@@ -1,0 +1,31 @@
+[
+    {
+        "name": "test",
+        "parts": []
+    },
+    {
+        "name": "othertest",
+        "parts": [
+            {
+                "name": "NextTest",
+                "type": "test",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "name": "badtest",
+        "parts": [
+            {
+                "name": "GoodTest",
+                "type": "test",
+                "count": 1
+            },
+            {
+                "name": "BadTest",
+                "type": "badtest",
+                "count": 1
+            }
+        ]
+    }
+]
