@@ -9,6 +9,21 @@
             {
                 "name": "NextTest",
                 "type": "test",
+                "count": 3
+            },
+            {
+                "name": "OTest",
+                "type": "otherothertest",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "name": "otherothertest",
+        "parts":[
+            {
+                "name": "NextTest",
+                "type": "test",
                 "count": 1
             }
         ]

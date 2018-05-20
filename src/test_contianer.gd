@@ -1,11 +1,12 @@
-extends Node;
+extends MarginContainer
 
 onready var testEq = preload('equipment.gd').new()
-onready var testTree = preload('tree_equipment_element.gd').new()
+onready var EqTree = preload('tree_equipment_element.gd')
 var testJson = '{ "name": "TestEQ", "parts": [ {"name": "TestPart", "type":"test", "count":10 }, {"name": "OtherPart", "type":"othertest", "count":1 }, {"name": "BadPart", "type":"badtest", "count":1 } ] }'
 
 func _ready():
-	self.add_child(testTree)
+	var tree = EqTree.new()
+	self.add_child(tree)
 	testEq.LoadBlueprint(testJson)
-	print(testEq)
-	testTree.init(testEq)
+	tree.init(testEq)
+	pass

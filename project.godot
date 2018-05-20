@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="OpenEVA"
-run/main_scene="res://scenes/TestScene.tscn"
+run/main_scene="res://scenes/test_container.tscn"
 config/icon="res://icon.png"
 
 [gdnative]

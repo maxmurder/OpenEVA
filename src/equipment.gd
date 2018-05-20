@@ -1,6 +1,7 @@
 # base equipment class
 var partDefPath = 'res://raw/partdef.json'; # path to the partdefs file
 
+var name = '' # name of the part
 var blueprint = {}; # stores the blueprint for the part
 var parts = {}; # saves the parts as contstructed from the equipment blueprint
 var partdefs = {}; # stores the part definitions from partdefs file
@@ -38,7 +39,7 @@ func AddPart(inPart):
 		for subPart in part['parts']:
 			# parts shouldnt contain themselves as subparts
 			if(subPart['type'] != parts[id]['type']):
-				for itr in range(0, inPart['count']):
+				for itr in range(0, subPart['count']):
 					# add the sub part
 					parts[id]['children'].append(AddPart(subPart));
 			else:
@@ -48,6 +49,7 @@ func AddPart(inPart):
 # load equipment from json
 func LoadBlueprint(json):
 	blueprint = parse_json(json);
+	name = blueprint['name']
 	for item in blueprint['parts']:
 		for itr in range(0, item['count']):
 			AddPart(item);
