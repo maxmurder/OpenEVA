@@ -1,10 +1,13 @@
 [
     {
         "name": "test",
-        "parts": []
+        "hp": 1000,
+        "parts": [],
+        "tags":["DEBUG"]
     },
     {
         "name": "othertest",
+        "hp": 1000,
         "parts": [
             {
                 "name": "NextTest",
@@ -16,20 +19,24 @@
                 "type": "otherothertest",
                 "count": 1
             }
-        ]
+        ],
+        "tags":["DEBUG"]
     },
     {
         "name": "otherothertest",
+        "hp": 2500,
         "parts":[
             {
                 "name": "NextTest",
                 "type": "test",
                 "count": 1
             }
-        ]
+        ],
+        "tags":["DEBUG"]
     },
     {
         "name": "badtest",
+        "hp": 1000,
         "parts": [
             {
                 "name": "GoodTest",
@@ -41,6 +48,7 @@
                 "type": "badtest",
                 "count": 1
             }
-        ]
+        ],
+        "tags":["DEBUG"]
     }
 ]

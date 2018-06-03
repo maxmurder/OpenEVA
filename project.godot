@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="OpenEVA"
-run/main_scene="res://scenes/test_container.tscn"
+run/main_scene="res://scenes/UI/GUI.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+game_manager="*res://src/game_manager.gd"
 
 [gdnative]
 

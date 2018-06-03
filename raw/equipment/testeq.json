@@ -1,0 +1,8 @@
+{ 
+    "name": "TestEQ", 
+    "parts": [ 
+        {"name": "TestPart", "type":"test", "count":10 },
+        {"name": "OtherPart", "type":"othertest", "count":1 }, 
+        {"name": "BadPart", "type":"badtest", "count":1 } 
+    ] 
+}
