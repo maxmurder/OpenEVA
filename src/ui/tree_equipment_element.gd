@@ -31,6 +31,14 @@ func GenerateTree():
 func init(Equipment):
 	# create root node
 	self.create_item()
-	self.set_hide_root(false)
+	self.set_hide_root(true)
 	self.Equipment = Equipment
 	GenerateTree()
+
+func on_popup(arrow_clicked):
+	print('ding')
+	print(self.get_edited())
+	print(get_custom_popup_rect())
+	
+func _ready():
+	self.connect("custom_popup_edited", self, "on_popup")
