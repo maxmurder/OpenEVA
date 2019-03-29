@@ -1,0 +1,10 @@
+{ 
+    "name": "Widget", 
+    "parts": [ 
+        {"name": "Screw", "type":"screw", "count":3 },
+        {"name": "Nut", "type":"nut", "count":1 }, 
+        {"name": "Bolt", "type":"bolt", "count":1 },
+        {"name": "Washer", "type": "washer", "count": 1},
+        {"name": "Frame", "type": "frame", "count": 1} 
+    ] 
+}

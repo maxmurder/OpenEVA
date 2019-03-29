@@ -1,10 +1,10 @@
 extends Node
 
-const Equipment = preload('res://src/equipment.gd')
-var equipmentInventory = []
+const widget = preload('res://src/widget.gd')
+var widgetInventory = []
 
 func AddItem(Blueprint):
-	var eq = Equipment.new()
+	var eq = widget.new()
 	eq.LoadBlueprint(Blueprint)
-	equipmentInventory.append(eq)
+	widgetInventory.append(eq)
 	return eq

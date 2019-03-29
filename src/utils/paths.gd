@@ -1,5 +1,5 @@
 const raw_part_path = 'res://raw/part/' # path to raw part definitons
-const raw_eqip_path = 'res://raw/eqipment/' # path to raw equipment definitions
+const raw_widget_path = 'res://raw/widgets/' # path to raw widget definitions
 
 static func ls(path):
 	var files = []

@@ -1,8 +1,8 @@
 const json = preload('res://src/utils/json.gd')
-# base equipment class
+# base widget class
 var name = '' # name of the part
 var blueprint = {} # stores the blueprint for the part
-var parts = {} # saves the parts as contstructed from the equipment blueprint
+var parts = {} # saves the parts as contstructed from the widget blueprint
 
 var partID = 0 # part uid 
 
@@ -39,10 +39,13 @@ func AddPart(inPart):
 				print( 'Warning: part [%s] contians itself as a subpart! Skipping to avoid an infinite recursion' % part['name'])
 	return id
 
-# load equipment from json
+# load widget from json
 func LoadBlueprint(blueprint):
-	name = blueprint['name']
-	for item in blueprint['parts']:
-		for itr in range(0, item['count']):
-			AddPart(item)
+	if blueprint:
+		name = blueprint['name']
+		for item in blueprint['parts']:
+			for itr in range(0, item['count']):
+				AddPart(item)
+	else:
+		printerr("could not load null blueprint")
 

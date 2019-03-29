@@ -1,252 +1,158 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/ui/inventory_list.gd" type="Script" id=1]
-[ext_resource path="res://src/ui/part_panel.gd" type="Script" id=2]
+[ext_resource path="res://src/ui/widget_ui.gd" type="Script" id=1]
+[ext_resource path="res://src/ui/inventory_list.gd" type="Script" id=2]
+[ext_resource path="res://src/ui/part_tree.gd" type="Script" id=3]
+[ext_resource path="res://src/ui/stats_panel.gd" type="Script" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://src/ui/control_panel.gd" type="Script" id=6]
 
-[node name="GUI" type="MarginContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="GUI" type="MarginContainer"]
 margin_right = 1024.0
 margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 0
 custom_constants/margin_top = 20
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 0
-_sections_unfolded = [ "Anchor", "Margin", "Theme", "custom_constants" ]
 
-[node name="TabContainer" type="TabContainer" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TabContainer" type="TabContainer" parent="."]
 margin_top = 20.0
 margin_right = 1024.0
 margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 tab_align = 0
-tabs_visible = true
 
-[node name="Equipment" type="Tabs" parent="TabContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="WidgetTab" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-tab_align = 1
-scrolling_enabled = true
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Equipment" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="Widget" type="MarginContainer" parent="TabContainer/WidgetTab"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -4.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 5
 custom_constants/margin_top = 5
 custom_constants/margin_left = 5
 custom_constants/margin_bottom = 5
+script = ExtResource( 1 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Equipment/MarginContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/WidgetTab/Widget"]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 1015.0
 margin_bottom = 539.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Theme", "custom_constants" ]
 
-[node name="VBox_Selection" type="VBoxContainer" parent="TabContainer/Equipment/MarginContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SelectionBox" type="VBoxContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer"]
 margin_right = 526.0
 margin_bottom = 534.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="EquipPanel" type="PanelContainer" parent="TabContainer/Equipment/MarginContainer/HBoxContainer/VBox_Selection" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="EquipPanel" type="PanelContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/SelectionBox"]
 margin_right = 526.0
 margin_bottom = 270.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
 
-[node name="EquipList" type="ItemList" parent="TabContainer/Equipment/MarginContainer/HBoxContainer/VBox_Selection/EquipPanel" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="EquipList" type="ItemList" parent="TabContainer/WidgetTab/Widget/HBoxContainer/SelectionBox/EquipPanel"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 519.0
 margin_bottom = 263.0
 rect_min_size = Vector2( 512, 256 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 items = [ "Item 0", null, false, "Item 1", null, false, "Item 2", null, false, "Item 3", null, false, "Item 4", null, false ]
-select_mode = 0
-allow_reselect = false
-icon_mode = 1
-fixed_icon_size = Vector2( 0, 0 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
-[node name="PartPanel" type="PanelContainer" parent="TabContainer/Equipment/MarginContainer/HBoxContainer/VBox_Selection" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PartPanel" type="PanelContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/SelectionBox"]
 margin_top = 274.0
 margin_right = 526.0
 margin_bottom = 534.0
 rect_min_size = Vector2( 0, 260 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 2 )
-_sections_unfolded = [ "Rect", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Equipment/MarginContainer/HBoxContainer" index="1"]
+[node name="PartTree" type="Tree" parent="TabContainer/WidgetTab/Widget/HBoxContainer/SelectionBox/PartPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 519.0
+margin_bottom = 253.0
+script = ExtResource( 3 )
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="DetailsBox" type="VBoxContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer"]
 margin_left = 530.0
 margin_right = 1009.0
 margin_bottom = 534.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Mouse", "Size Flags", "Theme", "custom_constants" ]
 
-[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Equipment/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="DetailContainer" type="PanelContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox"]
 margin_right = 479.0
 margin_bottom = 534.0
 rect_min_size = Vector2( 479, 534 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect", "custom_styles" ]
 
-[node name="Contracts" type="Tabs" parent="TabContainer" index="1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 472.0
+margin_bottom = 527.0
 
+[node name="StatsPanel" type="PanelContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer"]
+margin_right = 465.0
+margin_bottom = 270.0
+script = ExtResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer/StatsPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 458.0
+margin_bottom = 263.0
+
+[node name="CrossSection" type="TextureRect" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer/StatsPanel/HBoxContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer/StatsPanel/HBoxContainer"]
+margin_left = 260.0
+margin_right = 450.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 190, 0 )
+
+[node name="Eq_Name" type="Label" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer/StatsPanel/HBoxContainer/VBoxContainer"]
+margin_right = 190.0
+margin_bottom = 14.0
+text = "Name"
+align = 1
+
+[node name="ControlPanel" type="PanelContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer"]
+margin_top = 274.0
+margin_right = 465.0
+margin_bottom = 520.0
+size_flags_vertical = 3
+script = ExtResource( 6 )
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer/ControlPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 458.0
+margin_bottom = 239.0
+
+[node name="Pt_Name" type="Label" parent="TabContainer/WidgetTab/Widget/HBoxContainer/DetailsBox/DetailContainer/VBoxContainer/ControlPanel/GridContainer"]
+margin_right = 451.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Contracts" type="Tabs" parent="TabContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-tab_align = 1
-scrolling_enabled = true
 
-[node name="Character" type="Tabs" parent="TabContainer" index="2"]
-
+[node name="Character" type="Tabs" parent="TabContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-tab_align = 1
-scrolling_enabled = true
-
 

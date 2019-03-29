@@ -19,4 +19,5 @@ static func LoadDefs(path):
 func _ready():
 	self.partdefs = LoadDefs(Paths.raw_part_path)
 	## test
-	self.inventory.AddItem(json.Load('res://raw/equipment/testeq.json'))
+	self.inventory.AddItem(json.Load('res://raw/widgets/testeq.json'))
+	self.inventory.AddItem(json.Load('res://raw/widgets/widget.json'))

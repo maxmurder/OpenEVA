@@ -5,3 +5,4 @@
 *.swp
 *.fuse*
 .import/*
+*.code-workspace

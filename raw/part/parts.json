@@ -1,0 +1,32 @@
+[
+    {
+        "name": "screw",
+        "hp": 10,
+        "parts": [],
+        "tags":[]
+    },
+    {
+        "name": "washer",
+        "hp": 5,
+        "parts": [],
+        "tags":[]
+    },
+    {
+        "name": "nut",
+        "hp": 10,
+        "parts": [],
+        "tags":[]
+    },
+    {
+        "name": "bolt",
+        "hp": 10,
+        "parts": [],
+        "tags":[]
+    },
+    {
+        "name": "frame",
+        "hp": 100,
+        "parts": [],
+        "tags":["STRUCT"]
+    }
+]
