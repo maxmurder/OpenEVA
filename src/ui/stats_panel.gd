@@ -1,11 +1,13 @@
 extends PanelContainer
 
-onready var eq_name = find_node("Eq_Name")
+onready var name_label = find_node("widget_name")
+onready var cross_section_texture = find_node("widget_texture")
 
 func _ready():
-	eq_name.text = "Hello"
+	#name_label.text = ""
 	pass
 
 func Load(item):
-	eq_name.text = item.name
+	name_label.text = item.name
+	cross_section_texture.texture = load(item.texture)
 	

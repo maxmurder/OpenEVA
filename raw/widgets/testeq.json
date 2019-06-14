@@ -1,5 +1,6 @@
 { 
-    "name": "TestEQ", 
+    "name": "TestEQ;", 
+	"texture": "res://raw/img/checker.png"
     "parts": [ 
         {"name": "TestPart", "type":"test", "count":10 },
         {"name": "OtherPart", "type":"othertest", "count":1 }, 

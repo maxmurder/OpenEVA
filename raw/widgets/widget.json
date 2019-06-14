@@ -1,5 +1,6 @@
 { 
-    "name": "Widget", 
+    "name": "Widget",
+	"texture": "res://raw/img/checker.png",
     "parts": [ 
         {"name": "Screw", "type":"screw", "count":3 },
         {"name": "Nut", "type":"nut", "count":1 }, 

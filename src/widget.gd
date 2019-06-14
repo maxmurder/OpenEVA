@@ -1,6 +1,7 @@
 const json = preload('res://src/utils/json.gd')
 # base widget class
 var name = '' # name of the part
+var texture = ''
 var blueprint = {} # stores the blueprint for the part
 var parts = {} # saves the parts as contstructed from the widget blueprint
 
@@ -43,6 +44,7 @@ func AddPart(inPart):
 func LoadBlueprint(blueprint):
 	if blueprint:
 		name = blueprint['name']
+		texture = blueprint['texture']
 		for item in blueprint['parts']:
 			for itr in range(0, item['count']):
 				AddPart(item)
